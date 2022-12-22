@@ -8,7 +8,13 @@
       step = 1, stepTimes = [1000, 1000, 2000, 2000];
 
   function init() {
-    box.addEventListener('click', runAnimation);
+    box.addEventListener('click', runAnimation,playaudio());
+  }
+  function playaudio() {
+    let audio = new Audio('audio.mp3');
+    box.addEventListener('click',playaudio)
+    audio.play();
+
   }
 
   function showStreamer() {
